@@ -43,8 +43,8 @@ const TaskCard = async ({ tasks, title }) => {
       <div>
         {data && data.length ? (
           <div>
-            {data.map((task) => (
-              <div className="py-2 " key={task.id}>
+            {data.map((task, index) => (
+              <div className="py-2 " key={index}>
                 <div>
                   <span className="text-gray-800">{task.name}</span>
                 </div>
@@ -63,3 +63,5 @@ const TaskCard = async ({ tasks, title }) => {
     </Card>
   );
 };
+
+export default TaskCard;
