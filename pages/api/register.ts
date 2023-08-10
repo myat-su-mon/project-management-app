@@ -1,6 +1,6 @@
-import { createJWT } from "@/lib";
-import { db } from "@/lib";
-import { hashPassword } from "@/lib/auth";
+import { createJWT } from "../../lib/auth";
+import { db } from "../../lib/db";
+import { hashPassword } from "../../lib/auth";
 import { serialize } from "cookie";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -30,6 +30,9 @@ export default async function register(
     );
 
     res.status(201);
-    res.end();
+    res.json({});
+  } else {
+    res.status(402);
+    res.json({});
   }
 }

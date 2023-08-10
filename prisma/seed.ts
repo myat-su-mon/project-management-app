@@ -1,4 +1,4 @@
-import { db } from "@/lib/db";
+import { db } from "../lib/db";
 import { TASK_STATUS } from "@prisma/client";
 
 const getRandomTaskStatus = () => {
