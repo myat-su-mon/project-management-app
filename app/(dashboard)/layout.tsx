@@ -7,7 +7,7 @@ const DashboardLayout = ({ children }) => {
     <html lang="en">
       <head></head>
       <body className="h-screen w-screen candy-mesh p-6">
-        <GlassPane className="w-full h-full flex items-center justify-center">
+        <GlassPane className="w-full h-full flex items-center justify-center p-3">
           <Sidebar />
           {children}
         </GlassPane>
