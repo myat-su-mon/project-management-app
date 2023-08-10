@@ -30,6 +30,9 @@ export default async function signin(
 
       res.status(201);
       res.end();
+    } else {
+      res.status(402);
+      res.end();
     }
   }
 }
