@@ -5,8 +5,6 @@ import Modal from "react-modal";
 import Button from "./Button";
 import Input from "./Input";
 
-Modal.setAppElement("#modal");
-
 const NewProject = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [name, setName] = useState("");
@@ -25,7 +23,7 @@ const NewProject = () => {
       <Button onClick={() => openModal()}>+ New Project</Button>
 
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={isModalOpen}
         onRequestClose={closeModal}
         overlayClassName="bg-[rgba(0,0,0,.4)] flex justify-center items-center absolute top-0 left-0 h-screen w-screen"
         className="w-3/4 bg-white rounded-xl p-8"
